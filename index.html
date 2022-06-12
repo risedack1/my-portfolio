@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Web-developer Tymur Oleshkevych</title>
+  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+
+  <header class="header">
+  <div class="container header__container">
+    <div class="logo header__logo">
+      <a class="logo__link" href="#hero">
+        <svg>
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+    </div>
+    <nav class="nav header__nav" title="navigation">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#about" class="nav__link link-hover" data-scroll>
+            About Me
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#skills" class="nav__link link-hover" data-scroll>
+            Skills
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#portfolio" class="nav__link link-hover" data-scroll="">
+            Portfolio
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#contacts" class="nav__link link-hover" data-scroll="">
+            Contacts
+          </a>
+        </li>
+      </ul>
+      <button class="nav__close btn-reset"></button>
+    </nav>
+    <button class="header__menu-button menu-button btn-reset" type="button">
+      <span></span>
+    </button>
+    <div class="social header__social">
+      <button class="social__button social-button" aria-label="open social list">
+        <span class="social-button__dot"></span>
+        <span class="social-button__dot"></span>
+        <span class="social-button__dot"></span>
+      </button>
+      <ul class="social__items">
+        <li class="social__item">
+          <a class="social__link" href="https://www.google.com/" target="_blank">
+            <svg>
+              <use xlink:href="img/sprite.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#" target="_blank">
+            <svg>
+              <use xlink:href="img/sprite.svg#github"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#" target="_blank">
+            <svg>
+              <use xlink:href="img/sprite.svg#telegram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+  <main class="main">
+    <div class="top-section">
+      <section class="hero" id="hero">
+  <div class="container hero__container">
+    <h1 class="hero__title">
+      Web-developer
+    </h1>
+    <h2 class="hero__subtitle">
+      Tymur
+      Oleshkevych
+    </h2>
+    <a class="button-main btn-reset hero__button" href="#contacts">
+      write me
+    </a>
+    <picture class="hero__image">
+      <source srcset="./img/hero-image.avif" type="image/avif">
+      <source srcset="./img/hero-image.webp" type="image/webp">
+      <img loading="lazy" src="./img/hero-image.png" class="image" alt="laptop picture">
+    </picture>
+    <a class="hero__arrow btn-reset down-button" href="#about">
+      <svg class="">
+        <use xlink:href="img/sprite.svg#down-arrow"></use>
+      </svg>
+    </a>
+  </div>
+</section>
+
+      <section class="about" id="about">
+  <div class="container about__container">
+    <div class="about__image">
+      <picture>
+        <source srcset="../img/my-photo.avif" type="image/avif">
+        <source srcset="../img/my-photo.webp" type="image/webp">
+        <img loading="lazy" src="../img/my-photo.png." class="image" alt="my photo">
+      </picture>
+    </div>
+    <div class="about__content">
+      <div class="about__subtitle subtitle">
+        About me
+      </div>
+      <h2 class="about__title title">
+        Few words about me
+      </h2>
+      <p class="about__top-note">
+        I am a professional front end developer. I perform the most interesting and complex tasks on freelance.
+      </p>
+      <ul class="about__list">
+        <li class="about__item">
+          Сonstantly developing and trying to learn something new
+        </li>
+        <li class="about__item">
+          I create websites for big and small businesses.
+        </li>
+        <li class="about__item">
+          Each project has an individual approach.
+        </li>
+        <li class="about__item">
+          I take tasks and meet deadlines seriously.
+        </li>
+        <li class="about__item">
+          I`ll never say, «That`s not my job».
+        </li>
+        <li class="about__item">
+          Always pay close attention to detail.
+        </li>
+      </ul>
+      <p class="about__bottom-note">
+        If you are finding someone passionate about reusable, clean code, secure applications and agile methodology
+        follower, then you are viewing right website!.
+      </p>
+    </div>
+  </div>
+</section>
+
+    </div>
+    <section class="skills" id="skills">
+  <div class="container skills__container">
+    <h2 class="skills__title title">My skills</h2>
+    <ul class="skills__list">
+      <li class="skills__item skill-card skill-card--active">
+        <div class="skill-card__title skill-card__title--active" tabindex="0">
+          <span class="skill-card__title-text">
+            HTML
+          </span>
+        </div>
+        <p class="skill-card__text">
+          HTML — is the code that is used to structure a web page and its content. The basic of your website.
+        </p>
+      </li>
+      <li class="skills__item skill-card">
+        <div class="skill-card__title" tabindex="0">
+          <span class="skill-card__title-text">
+            Css/Scss
+          </span>
+        </div>
+        <p class="skill-card__text">
+          Css/Scss — allows you to create great-looking web pages. I use a SCSS preprocessor to optimize development and
+          convenience in further supporting the website.
+        </p>
+      </li>
+      <li class="skills__item skill-card">
+        <div class="skill-card__title" tabindex="0">
+          <sp class="skill-card__title-text" an>
+            JS
+          </sp>
+        </div>
+        <p class="skill-card__text">
+          JS — is a scripting or programming language that allows you to implement complex
+          features on web pages. I use modern standards of JS ES6-ES9.
+        </p>
+      </li>
+      <li class="skills__item skill-card">
+        <div class="skill-card__title" tabindex="0">
+          <span class="skill-card__title-text">
+            JQuery
+          </span>
+        </div>
+        <p class="skill-card__text">
+          JQuery — also support and improve websites written on a JS library JQuery.
+        </p>
+      </li>
+      <li class="skills__item skill-card">
+        <div class="skill-card__title" tabindex="0">
+          <span class="skill-card__title-text">
+            Gulp
+          </span>
+        </div>
+        <p class="skill-card__text">
+          Gulp — task manager, optimizing files and making your website faster. I use most of
+          modern gulp plugins in my works.
+        </p>
+      </li>
+      <li class="skills__item skill-card">
+        <div class="skill-card__title" tabindex="0">
+          <span class="skill-card__title-text">
+            Figma
+          </span>
+        </div>
+        <p class="skill-card__text">
+          Figma/Photoshop — Its doesn`t matter where the design of your website was designed. I work with all modern
+          graphic editors.
+        </p>
+      </li>
+      <li class="skills__item skill-card">
+        <div class="skill-card__title" tabindex="0">
+          <spa class="skill-card__title-text" n>
+            Git
+          </spa>
+        </div>
+        <p class="skill-card__text">
+          Git — helps keep track of the changes you make to files and works with multiple developers or a large team.
+        </p>
+      </li>
+      <li class="skills__item skill-card">
+        <div class="skill-card__title" tabindex="0">
+          <span class="skill-card__title-text">
+            VSCode
+          </span>
+        </div>
+        <p class="skill-card__text">
+          VSCode — combines the simplicity of a source code editor with powerful developer tooling, like IntelliSense
+          code completion and debugging.
+        </p>
+      </li>
+      <li class="skills__item skill-card skill-card--button">
+        <a class="skill-card__button" href="#contacts">
+          write me
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <div class="bottom-section">
+      <section class="portfolio" id="portfolio">
+  <div class="container portfolio__top">
+    <div class="portfolio__top-left">
+      <div class="portfolio__subtitle subtitle">
+        Portfolio
+      </div>
+      <h2 class="portfolio__title title">
+        My works
+      </h2>
+    </div>
+    <div class="portfolio-top__right">
+      <button class="slider-button-prev btn-reset">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#arrow"></use>
+        </svg>
+      </button>
+      <button class="slider-button-next btn-reset">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#arrow"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="container-lg">
+    <div class="swiper portfolio-slider">
+      <div class="swiper-wrapper portfolio-slider__wrapper">
+        <div class="swiper-slide">
+          <a href="#" class="portfolio-slider__item portfolio-item">
+            <picture class="portfolio-item__image">
+              <source srcset="./img/portfolio/infrastructure.avif" type="image/avif">
+              <source srcset="./img/portfolio/infrastructure.webp" type="image/webp">
+              <img loading="lazy" class="image" src="./img/portfolio/infrastructure.jpg"
+                alt="Multi-page site with nice amination and full-page scrolling">
+            </picture>
+            <div class="portfolio-item__content">
+              <h3 class="portfolio-item__title">Multipage website</h3>
+              <p class="portfolio-item__text">
+                Multi-page site with nice amination and full-page scrolling
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="portfolio-slider__item portfolio-item">
+            <picture class="portfolio-item__image">
+              <source srcset="./img/portfolio/landing.avif" type="image/avif">
+              <source srcset="./img/portfolio/landing.webp" type="image/webp">
+              <img loading="lazy" class="image" src="./img/portfolio/landing.jpg" alt="Creative website with soft
+              transitions and nice animation">
+            </picture>
+            <div class="portfolio-item__content">
+              <h3 class="portfolio-item__title">Landing, one-page website</h3>
+              <p class="portfolio-item__text">
+                Simple one-page website.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="portfolio-slider__item portfolio-item">
+            <picture class="portfolio-item__image">
+              <source srcset="./img/portfolio/romsem.avif" type="image/avif">
+              <source srcset="./img/portfolio/romsem.webp" type="image/webp">
+              <img loading="lazy" class="image" src="./img/portfolio/romsem.jpg" alt="Creative website with soft
+              transitions and nice animation">
+            </picture>
+            <div class="portfolio-item__content">
+              <h3 class="portfolio-item__title">Romsem, multi-page website</h3>
+              <p class="portfolio-item__text">
+                Multi-page website with the implementation of adding products to the shopping cart.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="portfolio-slider__item portfolio-item">
+            <picture class="portfolio-item__image">
+              <source srcset="./img/portfolio/task.avif" type="image/avif">
+              <source srcset="./img/portfolio/task.webp" type="image/webp">
+              <img loading="lazy" class="image" src="./img/portfolio/task.jpg" alt="Creative website with soft
+            transitions and nice animation">
+            </picture>
+            <div class="portfolio-item__content">
+              <h3 class="portfolio-item__title">Task-list, web-application</h3>
+              <p class="portfolio-item__text">
+                Web-application that allows you to add and edit tasks, notes and links.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#" class="portfolio-slider__item portfolio-item">
+            <picture class="portfolio-item__image portfolio-item__image--center">
+              <source srcset="./img/portfolio/music.avif" type="image/avif">
+              <source srcset="./img/portfolio/music.webp" type="image/webp">
+              <img loading="lazy" class="image" src="./img/portfolio/music.jpg" alt="Creative website with soft
+            transitions and nice animation">
+            </picture>
+            <div class="portfolio-item__content">
+              <h3 class="portfolio-item__title">Neumann-music, landing page</h3>
+              <p class="portfolio-item__text">
+                Creative website with soft transitions and nice animation.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <article class="portfolio-slider__item portfolio-item">
+            <picture class="portfolio-item__image">
+              <source srcset="./img/portfolio/romsem.avif" type="image/avif">
+              <source srcset="./img/portfolio/romsem.webp" type="image/webp">
+              <img loading="lazy" class="image" src="./img/portfolio/romsem.jpg" alt="Creative website with soft
+              transitions and nice animation">
+            </picture>
+            <div class="portfolio-item__content">
+              <h3 class="portfolio-item__title">Romsem, multi-page website</h3>
+              <p class="portfolio-item__text">
+                Multi-page website with the implementation of adding products to the shopping cart.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <footer class="footer" id="contacts">
+  <div class="container footer__container">
+    <div class="footer__top">
+      <div class="footer__content">
+        <h2 class="footer__title title">
+          Get
+          in touch
+          with me
+        </h2>
+        <ul class="footer__list">
+          <li class="footer__item contact-item">
+            <div class="contact-item__icon">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#mail"></use>
+              </svg>
+            </div>
+            <div class="contact-item__title">
+              Email
+            </div>
+            <a class="contact-item__link" href="mailto:risedack1@gmail.com">
+              risedack1@gmail.com
+            </a>
+          </li>
+          <li class="footer__item contact-item">
+            <div class="contact-item__icon">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <div class="contact-item__title">
+              phone
+            </div>
+            <a class="contact-item__link" href="tel:+48792725889">
+              +48792725889
+            </a>
+          </li>
+          <li class="footer__item contact-item">
+            <div class="contact-item__icon">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#telegram"></use>
+              </svg>
+            </div>
+            <div class="contact-item__title">
+              Telegram
+            </div>
+            <a class="contact-item__link" href="#">
+              @risedack1
+            </a>
+          </li>
+        </ul>
+      </div>
+      <form action="#" class="footer__form footer-form">
+        <fieldset class="footer__fieldset">
+          <legend class="footer__form-title">
+            <span>Leave your contact</span>
+            and we will contact you shortly
+          </legend>
+          <div class="footer__form-group">
+            <label class="footer__form-label">
+              <input class="footer__form-input input-focus input-name" type="text" name="Name" placeholder="Name"
+                required>
+              <span class="focus-border">
+                <i></i>
+              </span>
+            </label>
+
+            <label class="footer__form-label">
+              <input class="footer__form-input input-focus input-email" type="email" name="Email" placeholder="Email"
+                required>
+              <span class="focus-border">
+                <i></i>
+              </span>
+            </label>
+
+            <label class="footer__form-label">
+              <input class="footer__form-input input-focus input-tel" type="tel" name="Phone" placeholder="Phone"
+                required>
+              <span class="focus-border">
+                <i></i>
+              </span>
+            </label>
+
+            <label class="footer__form-label">
+              <textarea class="footer__form-input input-focus input-message" name="Message"
+                placeholder="Message"></textarea>
+              <span class="focus-border">
+                <i></i>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+        <button class="footer__form-button button-main btn-reset" type="submit">
+          Send
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__bottom-container">
+      <div class="footer__copy">
+        All rights reserved.
+      </div>
+      <ul class="footer__social">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#telegram"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#github"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </main>
+
+</body>
+
+</html>
