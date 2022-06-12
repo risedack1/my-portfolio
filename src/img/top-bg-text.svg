@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1828" height="466" viewBox="0 0 1828 466">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 300px;
+        opacity: 0.04;
+        fill: #320752;
+        font-family: Geometria;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <text id="Web_developer" data-name="Web developer" class="cls-1" x="-45" y="210.999">Web<tspan x="-45" dy="249.9">developer</tspan></text>
+</svg>

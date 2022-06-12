@@ -1,0 +1,30 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+
+// base
+$font-family: "Geometria", sans-serif;
+$content-width: 1140px;
+$max-content-width: 1900px;
+$container-offset: 15px;
+$container: calc($content-width + ($container-offset * 2));
+$max-container: calc($max-content-width + ($container-offset * 2));
+
+//for adaptive value
+$container-for-adaptive: 1140;
+$max-container-for-adaptive: 1900;
+
+// colors
+$light-color: #fff;
+$color-darkblack: #000;
+$color-default: #6538a1;
+$color-default-bg: #6640a8;
+$color-title: #320752;
+$color-accent: #ffa800;
+
+// screen size
+
+$xsm: 380px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;

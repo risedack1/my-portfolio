@@ -1,0 +1,236 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family, sans-serif);
+  -webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+  margin: 0;
+  height: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: $light-color;
+  background-color: $light-color;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+
+  &__link {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in;
+  }
+
+  svg {
+    width: 24px;
+    height: 26px;
+    fill: $light-color;
+    object-fit: cover;
+  }
+}
+
+.title {
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 65px;
+
+  @include w($sm) {
+    font-size: 47px;
+    line-height: 59px;
+  }
+}
+
+.subtitle {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.top-section {
+  background-color: rgb(101, 69, 174);
+  background-image: url("../img/top-bg-text.svg"), url("../img/top-bg.svg"),
+    radial-gradient(circle, rgba(101, 69, 174, 1) 0%, #3d1f72 46%, #4b1c89 100%);
+
+  background-position: left min(40vw, 20%), left top;
+  background-size: 100%, max(80vh, 100%);
+  background-repeat: no-repeat;
+}
+
+.bottom-section {
+  background-color: rgb(101, 69, 174);
+  background: url("../img/bottom-bg.svg"),
+    linear-gradient(180deg, #4b1c89 0%, #3d1f72 46%, rgba(97, 54, 152, 1) 100%);
+  background-size: 114% 59%, 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  @include w($lg) {
+    background-size: 116% 80%, 100% 60%;
+    background-position: center bottom, center top;
+  }
+
+  @include w($md) {
+    background-size: 116% 90%, 100% 60%;
+  }
+}
+
+.link-hover {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:focus {
+    outline-offset: 5px;
+    outline: 2px solid currentColor;
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleX(100%);
+    }
+  }
+
+  &:active {
+    color: $color-default-bg;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-container {
+  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+}
+
+.is-hidden {
+  display: none !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.main {
+  flex: 1 0 auto;
+  overflow-x: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 $container-offset;
+  max-width: $container;
+}
+
+.container-lg {
+  margin: 0 auto;
+  padding: 0 $container-offset;
+  max-width: $max-container;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+.logo {
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

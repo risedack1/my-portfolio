@@ -1,0 +1,100 @@
+.hero {
+  position: relative;
+  padding: 185px 0 60px;
+  height: 100vh;
+
+  background-image: url("../img/figures-bg/circle-1.svg"),
+    url("../img/figures-bg/circle-2.svg"), url("../img/figures-bg/circle-3.svg"),
+    url("../img/figures-bg/triangel-1.svg"),
+    url("../img/figures-bg/triangel-2.svg"),
+    url("../img/figures-bg/triangel-3.svg");
+  background-size: 62px, 64px, 52px, 20px, 18px, 18px;
+  background-position: 4% 50%, 88% 7%, 53% 82%, 5% 1%, 48% 17%, 12% 31%;
+  background-repeat: no-repeat;
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__title {
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 288px;
+    width: 100%;
+    background-color: $color-default;
+    color: $light-color;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+
+    @include w($sm) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 50px;
+    max-width: 690px;
+    color: $color-title;
+    text-transform: uppercase;
+    font-size: min(12vw, 90px);
+    font-weight: 900;
+
+    @include w($md) {
+      color: $light-color;
+      text-shadow: 0 0 10px $color-default;
+    }
+  }
+
+  &__button {
+    grid-column: 1/4;
+    margin-bottom: auto;
+
+    @include w($xsm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: -20px;
+    right: -337px;
+    z-index: -1;
+    width: min(70vw, 730px);
+    height: auto;
+
+    @include w($lg) {
+      top: auto;
+      bottom: 0;
+      right: -200px;
+    }
+
+    @include w($md) {
+      right: -100px;
+    }
+  }
+
+  &__arrow {
+    margin-top: auto;
+    @include w($xl) {
+      left: 15px;
+    }
+  }
+
+  @include w($sm) {
+    background-image: none, none, url("../img/figures-bg/circle-3.svg"),
+      url("../img/figures-bg/triangel-1.svg"),
+      url("../img/figures-bg/triangel-2.svg"),
+      url("../img/figures-bg/triangel-3.svg");
+  }
+
+  @include w($xsm) {
+    padding-bottom: 30px;
+    height: auto;
+  }
+}

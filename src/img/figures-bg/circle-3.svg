@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="66" height="72" viewBox="0 0 66 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ffa800;
+        stroke-width: 11px;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="5.5" y="5.5" width="55" height="61" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="13" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.828"/>
+      <feFlood result="flood" flood-color="#6539a2" flood-opacity="0.24"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g style="fill: none; filter: url(#filter)">
+    <circle id="Эллипс_3" data-name="Эллипс 3" class="cls-1" cx="32.5" cy="25.5" r="20" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#Эллипс_3" style="stroke: #ffa800; filter: none; fill: none"/>
+</svg>

@@ -1,0 +1,348 @@
+.footer {
+  padding: 190px 0 0;
+  background-image: url("../../img/footer-bg.png"),
+    url("../img/figures-bg/circle-3.svg"),
+    url("../../img/figures-bg/triangel-1.svg"),
+    url("../../img/figures-bg/triangel-2.svg"),
+    url("../../img/figures-bg/triangel-3.svg");
+  background-repeat: no-repeat;
+  background-position: 94% 0, 10% 4%, 14% 18%, 46% 87%, 85% 67%;
+  background-size: auto, 50px, 20px, 20px, 20px;
+
+  @include w($xl) {
+    background-size: 55%, 50px, 20px, 20px, 20px;
+  }
+
+  @include w($lg) {
+    padding-top: 50px;
+    background-position: 94% 55%;
+  }
+
+  @include w($md) {
+    background-position: 94% 45%;
+  }
+
+  @include w($sm) {
+    padding-top: 30px;
+    background-position: 127% 50%;
+    background-size: 70%, 50px, 20px, 20px, 20px;
+  }
+
+  &__container {
+    margin-bottom: 140px;
+
+    @include w($sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: flex-end;
+    column-gap: 60px;
+
+    @include w($lg) {
+      column-gap: 0;
+      row-gap: 60px;
+    }
+  }
+
+  &__content {
+    grid-column: 1/5;
+    color: $color-title;
+
+    @include w($lg) {
+      grid-column: 1/6;
+    }
+  }
+
+  &__title {
+    margin-bottom: 80px;
+    text-shadow: 2px 2px 5px $light-color;
+    font-size: min(6vw, 63px);
+    text-transform: uppercase;
+
+    @include w($md) {
+      font-size: 50px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__form {
+    padding: 28px 60px 33px 45px;
+    grid-column: 5/13;
+    border-radius: 15px;
+    background-color: $color-default-bg;
+
+    @include w($lg) {
+      grid-column: 12 span;
+    }
+
+    @include w($lg) {
+      padding: 15px;
+    }
+  }
+
+  &__fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  &__form-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    span {
+      display: block;
+      font-weight: 700;
+    }
+  }
+
+  &__form-group {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 55px);
+    gap: 10px;
+
+    @include w($md) {
+      grid-template-rows: repeat(6, 55px);
+    }
+  }
+
+  &__form-label {
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1 span;
+    overflow: hidden;
+
+    @include w($md) {
+      grid-column: 1/3;
+    }
+
+    &:last-child {
+      grid-column: 2/3;
+      grid-row: 1/4;
+
+      &::before {
+        top: 22px;
+      }
+
+      @include w($md) {
+        grid-column: 1/3;
+        grid-row: 4/7;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 15px;
+      border-radius: 100%;
+      width: 8px;
+      height: 8px;
+      transform: translateX(-30px);
+      box-shadow: -4px 0px 4px 2px rgb(255 168 0 / 49%),
+        -12px 0px 4px 0px rgb(255 168 0 / 56%),
+        -16px 0px 4px -2px rgb(255 168 0 / 77%);
+      background-color: $color-accent;
+      transition: box-shadow 0.5s ease-in 0.03s, opacity 0.3s ease-in-out,
+        visibility 0.3s ease-in, transform 0.3s ease-in;
+    }
+
+    &:hover {
+      &::before {
+        transform: translateX(0);
+        box-shadow: 0px 0px 1px 1px rgb(255 168 0 / 49%),
+          0px 0px 2px 0px rgb(255 168 0 / 56%),
+          0px 0px 1px -1px rgb(255 168 0 / 65%);
+      }
+    }
+  }
+
+  &__form-input {
+    padding: 15px 30px;
+    padding-right: 10px;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__bottom {
+    padding: 20px 0;
+    border-top: 1px solid rgba(102, 64, 168, 0.3);
+  }
+
+  &__bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copy {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: $color-title;
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social-item {
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+
+  &__social-link {
+    svg {
+      fill: $color-title;
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      transform: scale(1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover {
+      svg {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.input-focus {
+  outline: transparent;
+}
+
+.input-focus ~ .focus-border:before,
+.input-focus ~ .focus-border:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: $color-accent;
+  transition: 0.3s;
+}
+.input-focus ~ .focus-border:after {
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 0;
+}
+.input-focus ~ .focus-border i:before,
+.input-focus ~ .focus-border i:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background-color: $color-accent;
+  transition: 0.4s;
+}
+.input-focus ~ .focus-border i:after {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+}
+.input-focus:focus ~ .focus-border:before,
+.input-focus:focus ~ .focus-border:after {
+  width: 100%;
+  transition: 0.3s;
+}
+.input-focus:focus ~ .focus-border i:before,
+.input-focus:focus ~ .focus-border i:after {
+  height: 100%;
+  transition: 0.4s;
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 67px 100%;
+  column-gap: 17px;
+  &__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/2;
+    grid-row: 2 span;
+    width: 67px;
+    height: 67px;
+    border-radius: 100%;
+    background-color: $color-title;
+    svg {
+      fill: $light-color;
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    grid-columns: 2/3;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    grid-column: 2/3;
+    font-size: 20px;
+    font-weight: 25px;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: $color-default-bg;
+    }
+  }
+
+  &:not(:last-child) {
+    .contact-item__icon::before {
+      content: "";
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 21px;
+      height: 3px;
+      background-color: $color-accent;
+    }
+  }
+}
+
+.just-validate-error-field {
+  border: 2px solid red;
+
+  &::placeholder {
+    color: red;
+  }
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
