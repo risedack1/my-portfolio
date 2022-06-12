@@ -754,7 +754,7 @@ input::-webkit-inner-spin-button {
 
 .footer {
   padding: 190px 0 0;
-  background-image: url("../../img/footer-bg.png"), url("../img/figures-bg/circle-3.svg"), url("../../img/figures-bg/triangel-1.svg"), url("../../img/figures-bg/triangel-2.svg"), url("../../img/figures-bg/triangel-3.svg");
+  background-image: url("../img/footer-bg.png"), url("../img/figures-bg/circle-3.svg"), url("../img/figures-bg/triangel-1.svg"), url("../img/figures-bg/triangel-2.svg"), url("../img/figures-bg/triangel-3.svg");
   background-repeat: no-repeat;
   background-position: 94% 0, 10% 4%, 14% 18%, 46% 87%, 85% 67%;
   background-size: auto, 50px, 20px, 20px, 20px;
