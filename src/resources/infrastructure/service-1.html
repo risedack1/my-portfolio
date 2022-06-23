@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Инфраструктура</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+    <header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <button class="burger" type="button" aria-label="Открыть меню">
+                <span></span>
+            </button>
+            <a class="header-logo header__logo" href="#">
+                <img src="images/logo.png" alt="#" />
+            </a>
+            <nav class="menu" aria-hidden="true">
+                <button class="menu__close" type="button" aria-label="закрыть меню"></button>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link menu__link--bold link" href="index.html"> Главная </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link menu__link--bold link" href="company.html"> Компания </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link link" href="vacancies.html"> Вакансии </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link menu__link--bold link" href="service-1.html"> Услуги </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link link" href="service-1.html"> Сети водоснабжения </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link link" href="service-2.html"> Водоотведение и канализация </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link link" href="service-3.html"> Наружные тепловые сети </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link link" href="service-4.html"> Монтаж Ж/Б конструкции </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link link" href="service-5.html"> Благоустройство территорий </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link menu__link--bold link" href="projects.html"> Проэкты </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link menu__link--bold link" href="contacts.html"> Контакты </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__contact">
+                <a class="header__phone link" href="tel:+78124016495">
+                    <span class="header__phone--gold">+7 (812)</span> 401-64-95
+                </a>
+                <a class="header__button button popup-link" href="#callback">
+                    <span class="button__phone">
+                        <svg>
+                            <use xlink:href="images/sprite.svg#phone"></use>
+                        </svg>
+                    </span>
+                    <span class="header__button-text">Обратный звонок</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+    <main class="main">
+        <section class="service-first">
+            <div class="container">
+                <div class="service-first__breadcrumbs breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Услуги</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--active" href="#">Монтаж сетей
+                                водоснабжения</a>
+                        </li>
+                    </ul>
+                </div>
+                <section class="gallery-first">
+                    <h2 class="gallery-first__title title">
+                        Монтаж сетей водоснабжения
+                    </h2>
+                    <ul class="gallery-first__list">
+                        <li class="gallery-first__item" data-aos="fade-right">
+                            <span class="gallery-first__text">Земляные работы</span>
+                            <img class="gallery-first__image" src="images/service-1/gallery-first-1.jpg"
+                                alt="Земляный работы">
+                        </li>
+
+                        <li class="gallery-first__item" data-aos="fade-down">
+                            <span class="gallery-first__text">Прокладка ПНД труб</span>
+                            <img class="gallery-first__image" src="images/service-1/gallery-first-2.jpg"
+                                alt="Земляный работы">
+                        </li>
+
+                        <li class="gallery-first__item" data-aos="fade-left">
+                            <span class="gallery-first__text">Прокладка ПНД труб</span>
+                            <img class="gallery-first__image" src="images/service-1/gallery-first-3.jpg"
+                                alt="Земляный работы">
+                        </li>
+                    </ul>
+                    <div class="timing">
+                        <div class="timing__inner">
+                            <span class="timing__title">
+                                Сроки<br>
+                                завершения работ:
+                            </span>
+                            <div class="timing__slider">
+                                <div id="timing-slider"></div>
+                            </div>
+                            <div class="timing__days">
+                                <div class="timing__days-inner">
+                                    <span id="timing-value"></span>
+                                    -
+                                    <span id="timing-value-second"></span>
+                                    <span class="timing__days-text">
+                                        рабочих дня*
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="timing__note">
+                            * Ориентировочный расчет
+                        </span>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="responsibilities">
+            <div class="container">
+                <h2 class="responsibilities__title title" data-aos="fade-left">
+                    Мы берем на себя
+                </h2>
+                <ul class="responsibilities__list">
+                    <li class="responsibilities__item responsibilities__item--doc" data-aos="fade-right">
+                        Сбор и подготовка<br>
+                        рабочей документации
+                    </li>
+                    <li class="responsibilities__item responsibilities__item--project" data-aos="fade-right"
+                        data-aos-delay="100">
+                        Проектирование
+                    </li>
+                    <li class="responsibilities__item responsibilities__item--agree" data-aos="fade-right"
+                        data-aos-delay="200">
+                        Согласование проекта
+                    </li>
+                    <li class="responsibilities__item responsibilities__item--service" data-aos="fade-left"
+                        data-aos-delay="500">
+                        Сервисное обслуживание
+                    </li>
+                    <li class="responsibilities__item responsibilities__item--start" data-aos="fade-left"
+                        data-aos-delay="400">
+                        Пусконаладочные работы
+                    </li>
+                    <li class="responsibilities__item responsibilities__item--works" data-aos="fade-left"
+                        data-aos-delay="300">
+                        Строительно-монтажные работы
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="autopark">
+            <div class="container">
+                <h2 class="autopark__title title" data-aos="fade-left">
+                    Собственный парк строительной техники:
+                </h2>
+                <ul class="autopark__list" data-aos="fade-right">
+                    <li class="autopark__item autopark__item--1">
+                        <h3 class="autopark__item-title">
+                            Илососная машина
+                        </h3>
+                        <span class="autopark__subtitle">
+                            КАМАЗ 65115 КО-530-01
+                        </span>
+                        <div class="autopark__image-box">
+                            <img class="autopark__image" src="images/service-1/autopark-1.png"
+                                alt="фото илососной машины">
+                        </div>
+                    </li>
+                    <li class="autopark__item autopark__item--gray autopark__item--2">
+                        <h3 class="autopark__item-title">
+                            Каналопромывочная машина
+                        </h3>
+                        <span class="autopark__subtitle">
+                            КАМАЗ 3572 КО-564-20
+                        </span>
+                        <div class="autopark__image-box autopark__image-box--center">
+                            <img class="autopark__image" src="images/service-1/autopark-3.png"
+                                alt="фото илососной машины">
+                        </div>
+                    </li>
+                    <li class="autopark__item autopark__item--gray autopark__item--3 autopark__item--right">
+                        <h3 class="autopark__item-title">
+                            Экскаватор-погрузчик
+                        </h3>
+                        <div class="autopark__image-box autopark__image-box--right">
+                            <img class="autopark__image" src="images/service-1/autopark-5.png"
+                                alt="фото илососной машины">
+                        </div>
+                    </li>
+                    <li class="autopark__item autopark__item--gray autopark__item--4">
+                        <h3 class="autopark__item-title">
+                            Погрузчик
+                        </h3>
+                        <div class="autopark__image-box autopark__image-box--center">
+                            <img class="autopark__image" src="images/service-1/autopark-2.png"
+                                alt="фото илососной машины">
+                        </div>
+                    </li>
+                    <li class="autopark__item autopark__item--5">
+                        <h3 class="autopark__item-title">
+                            Экскаватор
+                        </h3>
+                        <div class="autopark__image-box autopark__image-box--center">
+                            <img class="autopark__image" src="images/service-1/autopark-4.png"
+                                alt="фото илососной машины">
+                        </div>
+                    </li>
+                    <li class="autopark__item autopark__item--6">
+                        <h3 class="autopark__item-title">
+                            КАМАЗ бортовой с КМУ
+                        </h3>
+                        <div class="autopark__image-box autopark__image-box--right">
+                            <img class="autopark__image" src="images/service-1/autopark-6.png"
+                                alt="фото илососной машины">
+                        </div>
+                    </li>
+                    <li class="autopark__item autopark__item--7">
+                        <h3 class="autopark__item-title">
+                            Каток
+                        </h3>
+                        <div class="autopark__image-box autopark__image-box--right">
+                            <img class="autopark__image" src="images/service-1/autopark-7.png"
+                                alt="фото илососной машины">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="usage">
+            <div class="container">
+                <h2 class="usage__title" data-aos="fade-left">
+                    Используем
+                    <span class="usage__title--large">
+                        оборудование, инструменты
+                        и материалы
+                    </span>
+                    только <span class="usage__title--bold">надежных</span> поставщиков и производителей
+                </h2>
+                <ul class="usage__list">
+                    <li class="usage__item" data-aos="fade-down">
+                        <img class="usage__image" src="images/service-1/usage-1.svg" alt="">
+                    </li>
+                    <li class="usage__item" data-aos="fade-down" data-aos-delay="100">
+                        <img class="usage__image" src="images/service-1/usage-2.png" alt="используемые материалы">
+                    </li>
+                    <li class="usage__item" data-aos="fade-down" data-aos-delay="200">
+                        <img class="usage__image" src="images/service-1/usage-3.png" alt="используемые материалы">
+                    </li>
+                    <li class="usage__item" data-aos="fade-down" data-aos-delay="300">
+                        <img class="usage__image" src="images/service-1/usage-4.svg" alt="используемые материалы">
+                    </li>
+                    <li class="usage__item" data-aos="fade-down" data-aos-delay="400">
+                        <img class="usage__image" src="images/service-1/usage-5.png" alt="используемые материалы">
+                    </li>
+                    <li class="usage__item" data-aos="fade-down" data-aos-delay="500">
+                        <img class="usage__image" src="images/service-1/usage-6.png" alt="используемые материалы">
+                    </li>
+                    <li class="usage__item" data-aos="fade-down" data-aos-delay="600">
+                        <img class="usage__image" src="images/service-1/usage-7.png" alt="используемые материалы">
+                    </li>
+                    <li class="usage__item" data-aos="fade-down" data-aos-delay="700">
+                        <img class="usage__image" src="images/service-1/usage-8.svg" alt="используемые материалы">
+                    </li>
+                    <li class="usage__item" data-aos="fade-down" data-aos-delay="800">
+                        <img class="usage__image" src="images/service-1/usage-9.png" alt="используемые материалы">
+                    </li>
+                    <li class="usage__item" data-aos="fade-down" data-aos-delay="900">
+                        <img class="usage__image" src="images/service-1/usage-10.svg" alt="используемые материалы">
+                    </li>
+                    <li class="usage__item" data-aos="fade-down" data-aos-delay="1000">
+                        <img class="usage__image" src="images/service-1/usage-11.png" alt="используемые материалы">
+                    </li>
+                    <li class="usage__item" data-aos="fade-down" data-aos-delay="1100">
+                        <img class="usage__image" src="images/service-1/usage-12.png" alt="используемые материалы">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="norms">
+            <div class="container">
+                <h2 class="norms__title title" data-aos="fade-down">
+                    Выполняем работы строго следуя:
+                </h2>
+                <ul class="norms__list">
+                    <li class="norms__item" data-aos="fade-right">
+                        <span class="norms__number norms__number--1">
+                            01
+                        </span>
+                        <span class="norms__name">
+                            Законодательству
+                        </span>
+                    </li>
+                    <li class="norms__item" data-aos="fade-down">
+                        <span class="norms__number norms__number--2">
+                            02
+                        </span>
+                        <span class="norms__name">
+                            СНиП, СанПиН, нормативной документации
+                        </span>
+                    </li>
+                    <li class="norms__item" data-aos="fade-left">
+                        <span class="norms__number norms__number--3">
+                            03
+                        </span>
+                        <span class="norms__name">
+                            Внутреннему регламенту
+                        </span>
+                    </li>
+                </ul>
+                <p class="norms__text">
+                    Являемся членом СРО «Строительство. Инженерные системы»
+                </p>
+                <div class="norms__button-box">
+                    <a class="norms__button button" href="#">
+                        Ознакомиться с выпиской
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="projects">
+            <div class="container projects__container">
+                <div class="projects__top">
+                    <h2 class="projects__title title" data-aos="fade-right">Наши клиенты и проекты</h2>
+                    <a class="projects__button button" href="#" data-aos="fade-left">Все проекты</a>
+                </div>
+                <ul class="projects__list" data-aos="fade-left">
+                    <li class="projects__item" style="background-image: url('images/project-bg-1.jpg')">
+                        <a class="projects__link" href="#">
+                            <div class="projects__inner">
+                                <img class="projects__image" src="./images/project-logo-1.png" alt="логотип проэкта" />
+                                <div class="projects__info">
+                                    <p class="projects__info-bold">
+                                        Работы по монтажу прифундаментного дренажа
+                                    </p>
+                                    <p class="projects__address">
+                                        по адресу:<br />
+                                        ЛО, Всеволожский р-н, «Ручьи»
+                                    </p>
+                                    <span class="projects__more">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="projects__item" style="background-image: url('images/project-bg-2.jpg')">
+                        <a class="projects__link" href="#">
+                            <div class="projects__inner">
+                                <img class="projects__image" src="./images/project-logo-2.png" alt="логотип проэкта" />
+                                <div class="projects__info">
+                                    <p class="projects__info-bold">
+                                        Работы по монтажу прифундаментного дренажа
+                                    </p>
+                                    <p class="projects__address">
+                                        по адресу:<br />
+                                        ЛО, Всеволожский р-н, «Ручьи»
+                                    </p>
+                                    <span class="projects__more">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="projects__item" style="background-image: url('images/project-bg-3.jpg')">
+                        <a class="projects__link" href="#">
+                            <div class="projects__inner">
+                                <img class="projects__image" src="./images/project-logo-3.png" alt="логотип проэкта" />
+                                <div class="projects__info">
+                                    <p class="projects__info-bold">
+                                        Работы по монтажу прифундаментного дренажа
+                                    </p>
+                                    <p class="projects__address">
+                                        по адресу:<br />
+                                        ЛО, Всеволожский р-н, «Ручьи»
+                                    </p>
+                                    <span class="projects__more">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="projects__item" style="background-image: url('images/project-bg-4.jpg')">
+                        <a class="projects__link" href="#">
+                            <div class="projects__inner">
+                                <img class="projects__image" src="./images/project-logo-3.png" alt="логотип проэкта" />
+                                <div class="projects__info">
+                                    <p class="projects__info-bold">
+                                        Работы по монтажу прифундаментного дренажа
+                                    </p>
+                                    <p class="projects__address">
+                                        по адресу:<br />
+                                        ЛО, Всеволожский р-н, «Ручьи»
+                                    </p>
+                                    <span class="projects__more">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="projects__item" style="background-image: url('images/project-bg-5.jpg')">
+                        <a class="projects__link" href="#">
+                            <div class="projects__inner">
+                                <img class="projects__image" src="./images/project-logo-4.png" alt="логотип проэкта" />
+                                <div class="projects__info">
+                                    <p class="projects__info-bold">
+                                        Работы по монтажу прифундаментного дренажа
+                                    </p>
+                                    <p class="projects__address">
+                                        по адресу:<br />
+                                        ЛО, Всеволожский р-н, «Ручьи»
+                                    </p>
+                                    <span class="projects__more">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="projects__item" style="background-image: url('images/project-bg-6.jpg')">
+                        <a class="projects__link" href="#">
+                            <div class="projects__inner">
+                                <img class="projects__image" src="./images/project-logo-1.png" alt="логотип проэкта" />
+                                <div class="projects__info">
+                                    <p class="projects__info-bold">
+                                        Работы по монтажу прифундаментного дренажа
+                                    </p>
+                                    <p class="projects__address">
+                                        по адресу:<br />
+                                        ЛО, Всеволожский р-н, «Ручьи»
+                                    </p>
+                                    <span class="projects__more">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__content" data-aos="fade-right">
+            <h2 class="footer__title title">Работаем по всей России</h2>
+            <div class="footer__contacts">
+                <div class="footer__subtitle">Офис в Санкт-Петербурге:</div>
+                <address class="footer__address-list">
+                    <a class="footer__address footer__address--phone" href="+78124382635">
+                        +7 (812) 438-26-35
+                    </a>
+                    <a class="footer__address footer__address--mail" href="mailto:info@skinfra.ru">
+                        info@skinfra.ru
+                    </a>
+                    <span class="footer__address footer__address--location">
+                        195197, Санкт-Петербург, Кондратьевский пр., д. 15, к. 2, л. З, офис 204 БЦ
+                        "Фернан Леже"
+                    </span>
+                </address>
+            </div>
+        </div>
+        <form class="footer__form contact-form" action="#" method="POST" data-aos="fade-down">
+            <fieldset class="contact-form__fieldset">
+                <legend class="contact-form__legend">Свяжитесь с нами</legend>
+                <span class="contact-form__text">
+                    Задайте вопрос, пришлите коммерческое предложение или пригласите на тендер
+                </span>
+                <div class="contact-form__inner">
+                    <label class="contact-form__label">
+                        <span class="contact-form__label-text"> Представьтесь, пожалуйста* </span>
+                        <input class="contact-form__input" type="text" name="name" data-validate-field="name"
+                            placeholder="Ваше имя" required />
+                    </label>
+                    <label class="contact-form__label">
+                        <span class="contact-form__label-text"> Ваш телефон </span>
+                        <input class="contact-form__input" type="tel" name="phone" data-validate-field="phone"
+                            placeholder="+7 (___) ___-__-__" required />
+                    </label>
+                    <label class="contact-form__label contact-form__label--file">
+                        Прикрепить файл
+                        <input class="contact-form__input contact-form__input--hidden visually-hidden" type="file"
+                            name="file" required />
+                    </label>
+                    <button class="contact-form__button button" type="submit">
+                        Перезвоните мне
+                    </button>
+                    <div class="contact-form__wrap-checkbox">
+                        <input class="contact-form__checkbox-hidden visually-hidden" id="contact-form-checkbox"
+                            type="checkbox" name="agreement" data-validate-field="checkbox" required />
+                        <label class="contact-form__checkbox" for="contact-form-checkbox">
+                            Я соглашаюсь
+                            <a class="contact-form__checkbox-document" href="#">
+                                с политикой конфиденциальности
+                            </a>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</footer> <div class="popup popup--callback">
+    <div class="popup__content">
+        <div class="popup__body">
+            <div class="popup__close"></div>
+            <form class="popup__form" action="#">
+                <fieldset class="popup__fieldset">
+                    <legend class="popup__title">Заказать обратный звонок</legend>
+                    <label class="popup__label">
+                        <span class="popup__label-text">Представьтесь, пожалуйста*</span>
+                        <input class="popup__input" type="text" name="name" data-validate-field="name"
+                            placeholder="Ваше имя" required />
+                    </label>
+                    <label class="popup__label">
+                        <span class="popup__label-text">Ваш телефон</span>
+                        <input class="popup__input" type="tel" name="phone" data-validate-field="phone"
+                            placeholder="+7 (___) ___-__-__" required />
+                    </label>
+                    <input class="popup__checkbox-hidden visually-hidden" id="checkbox-document" type="checkbox"
+                        data-validate-field="checkbox" required />
+                    <label class="popup__checkbox" for="checkbox-document">
+                        Я соглашаюсь с
+                        <a class="popup__document" href="#">политикой конфиденциальности</a>
+                    </label>
+                </fieldset>
+                <button class="popup__button button" type="submit">Перезвоните мне</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup popup-project popup--project-1">
+    <div class="popup__content">
+        <div class="popup__body">
+            <div class="popup__close"></div>
+            <p class="popup__title">Заказчик:</p>
+
+            <p class="popup__subtitle">ООО Главстрой СПБ</p>
+
+            <p class="popup__title">Адрес объекта:</p>
+
+            <p class="popup__subtitle">Район Юнтолово Квартал 1 этап 2 корпуса 1,2,3,4</p>
+
+            <p class="popup__title">Наименование работ:</p>
+
+            <p class="popup__subtitle">Устройство прифундаментного дренажа</p>
+
+            <p class="popup__title">Объем выполненных работ:</p>
+
+            <p class="popup__subtitle">582 м.п.</p>
+        </div>
+    </div>
+</div>
+
+<div class="popup popup--video">
+    <div class="popup__content">
+        <div class="popup__body">
+            <div class="popup__close popup__close--video"></div>
+            <div class="popup__video--video"></div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="js/main.min.js"></script>
+    <script src="js/range.js"></script>
+</body>
+
+</html>

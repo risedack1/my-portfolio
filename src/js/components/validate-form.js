@@ -46,8 +46,18 @@ const rules1 = [
   },
 ];
 
+const inputs = document.querySelectorAll('.footer__form-input');
+const labels = document.querySelectorAll('.footer__form-label');
+
 const afterForm = () => {
-  console.log('Произошла отправка, тут можно писать любые действия');
+  console.log(1);
+  labels.forEach(el => el.classList.remove('validate-error'));
+
+  inputs.forEach(el => {
+    if (el.classList.contains('just-validate-error-field')) {
+      el.closest('.footer-form-label').classList.add('.validate-error');
+    }
+  });
 };
 
 validateForms('.footer-form', rules1, afterForm);

@@ -64,7 +64,9 @@
 .portfolio-slider {
   padding: 30px 0;
   &:hover .portfolio-item:not(:hover) > .portfolio-item__image {
-    filter: blur(10px);
+    @media (any-hover) {
+      filter: blur(10px);
+    }
   }
 }
 

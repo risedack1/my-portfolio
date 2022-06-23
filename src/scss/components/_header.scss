@@ -140,6 +140,7 @@
       border-radius: 50%;
       background-color: $color-default;
       transform: translate(-150%, -150%) skew(0, 0);
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
   }
 
@@ -172,7 +173,7 @@
 
   &__close {
     position: absolute;
-    top: 34px;
+    top: 10px;
     right: 14px;
     display: none;
     width: 50px;
@@ -216,6 +217,7 @@
     opacity: 0;
     visibility: hidden;
     background-color: rgba($color-title, 0.3);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
     &--active {
       opacity: 1;
@@ -227,7 +229,14 @@
         animation-timing-function: cubic-bezier(0, 1.63, 1, 1.08);
         animation-fill-mode: forwards;
         animation-delay: 0.3s;
+        opacity: 1;
+        visibility: visible;
       }
+    }
+
+    &--hidden {
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }
@@ -241,9 +250,7 @@
     transform: translate(26%, 26%) skew(-5deg, -5deg);
     box-shadow: 10px 10px 5px 20px $color-default-bg;
   }
-  70% {
-    // box-shadow: -5px -5px 5px 10px $color-default-bg;
-  }
+
   to {
     transform: translate(0, 0) skew(0, 0);
     box-shadow: 0px 0px 0px 0px $color-default-bg;
