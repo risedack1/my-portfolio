@@ -20,7 +20,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_header__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_smooth_scroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/smooth-scroll */ "./src/js/components/smooth-scroll.js");
 /* harmony import */ var _components_validate_form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/validate-form */ "./src/js/components/validate-form.js");
+/* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/preloader */ "./src/js/components/preloader.js");
+/* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_preloader__WEBPACK_IMPORTED_MODULE_7__);
 // import './components/slider';
+
 
 
 
@@ -149,15 +152,35 @@ var header = document.querySelector('.header');
 var page = document.querySelector('.page__body');
 header.addEventListener('click', function (e) {
   if (e.target.classList.contains('header__menu-button')) {
+    nav.classList.remove('nav--hidden');
     nav.classList.add('nav--active');
     menuButton.classList.add('header__menu-button--hidden');
     page.classList.add('disable-scroll');
   } else if (e.target.classList.contains('nav') || e.target.classList.contains('nav__close') || e.target.classList.contains('nav__link')) {
     nav.classList.remove('nav--active');
+    nav.classList.add('nav--hidden');
     menuButton.classList.remove('header__menu-button--hidden');
     page.classList.remove('disable-scroll');
   }
 });
+
+/***/ }),
+
+/***/ "./src/js/components/preloader.js":
+/*!****************************************!*\
+  !*** ./src/js/components/preloader.js ***!
+  \****************************************/
+/***/ (() => {
+
+var body = document.querySelector('.page__body');
+var preloader = document.querySelector('.preloader');
+
+window.onload = function () {
+  setTimeout(function () {
+    preloader.classList.remove('preloader--active');
+    body.classList.remove('disable-scroll');
+  }, 3000);
+};
 
 /***/ }),
 
@@ -296,9 +319,19 @@ var rules1 = [{
     errorMessage: 'Add message'
   }]
 }];
+var inputs = document.querySelectorAll('.footer__form-input');
+var labels = document.querySelectorAll('.footer__form-label');
 
 var afterForm = function afterForm() {
-  console.log('Произошла отправка, тут можно писать любые действия');
+  console.log(1);
+  labels.forEach(function (el) {
+    return el.classList.remove('validate-error');
+  });
+  inputs.forEach(function (el) {
+    if (el.classList.contains('just-validate-error-field')) {
+      el.closest('.footer-form-label').classList.add('.validate-error');
+    }
+  });
 };
 
 (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.footer-form', rules1, afterForm);

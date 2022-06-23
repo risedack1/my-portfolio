@@ -457,6 +457,9 @@ input::-webkit-inner-spin-button {
     -webkit-transform: translate(-150%, -150%) skew(0, 0);
     -ms-transform: translate(-150%, -150%) skew(0, 0);
     transform: translate(-150%, -150%) skew(0, 0);
+    -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
 }
 .nav__item:not(:last-child) {
@@ -484,7 +487,7 @@ input::-webkit-inner-spin-button {
 }
 .nav__close {
   position: absolute;
-  top: 34px;
+  top: 10px;
   right: 14px;
   display: none;
   width: 50px;
@@ -536,6 +539,9 @@ input::-webkit-inner-spin-button {
     opacity: 0;
     visibility: hidden;
     background-color: rgba(50, 7, 82, 0.3);
+    -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
   .nav--active {
     opacity: 1;
@@ -552,6 +558,12 @@ input::-webkit-inner-spin-button {
     animation-fill-mode: forwards;
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav--hidden {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -1097,10 +1109,16 @@ input::-webkit-inner-spin-button {
   grid-column: 1/2;
   -ms-grid-row-span: 2;
   grid-row: 2 span;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
   width: 67px;
   height: 67px;
   border-radius: 100%;
   background-color: #320752;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 .contact-item__icon svg {
   fill: #fff;
@@ -1111,6 +1129,9 @@ input::-webkit-inner-spin-button {
 }
 .contact-item__title {
   grid-columns: 2/3;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
@@ -1121,14 +1142,17 @@ input::-webkit-inner-spin-button {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
   font-size: 20px;
   font-weight: 25px;
   -webkit-transition: color 0.3s linear;
   -o-transition: color 0.3s linear;
   transition: color 0.3s linear;
 }
-.contact-item__link:hover {
-  color: #6640a8;
+.contact-item__link:hover + .contact-item__icon {
+  background-color: #ffa800;
 }
 .contact-item:not(:last-child) .contact-item__icon::before {
   content: "";
@@ -1851,9 +1875,11 @@ input::-webkit-inner-spin-button {
 .portfolio-slider {
   padding: 30px 0;
 }
-.portfolio-slider:hover .portfolio-item:not(:hover) > .portfolio-item__image {
-  -webkit-filter: blur(10px);
-  filter: blur(10px);
+@media (any-hover) {
+  .portfolio-slider:hover .portfolio-item:not(:hover) > .portfolio-item__image {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+  }
 }
 
 .portfolio-item {
@@ -2021,5 +2047,50 @@ input::-webkit-inner-spin-button {
   -webkit-transform: translateX(-10px) rotate(180deg);
   -ms-transform: translateX(-10px) rotate(180deg);
   transform: translateX(-10px) rotate(180deg);
+}
+
+.preloader {
+  position: fixed;
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  height: 0;
+  background-color: #6538a1;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.preloader--active {
+  opacity: 1;
+  visibility: visible;
+}
+.preloader__text {
+  color: currentColor;
+}
+
+.tally {
+  width: 10em;
+  height: 10em;
+}
+
+.tally__line,
+.tally__path {
+  stroke: currentColor;
 }
 /*# sourceMappingURL=main.css.map */
