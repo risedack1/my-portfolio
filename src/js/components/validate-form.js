@@ -46,18 +46,13 @@ const rules1 = [
   },
 ];
 
-const inputs = document.querySelectorAll('.footer__form-input');
-const labels = document.querySelectorAll('.footer__form-label');
-
 const afterForm = () => {
-  console.log(1);
-  labels.forEach(el => el.classList.remove('validate-error'));
+  const successMessage = document.querySelector('.footer-form__success');
+  successMessage.classList.add('footer-form__success--active');
 
-  inputs.forEach(el => {
-    if (el.classList.contains('just-validate-error-field')) {
-      el.closest('.footer-form-label').classList.add('.validate-error');
-    }
-  });
+  setTimeout(() => {
+    successMessage.classList.remove('footer-form__success--active');
+  }, 3000);
 };
 
 validateForms('.footer-form', rules1, afterForm);

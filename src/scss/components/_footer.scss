@@ -335,6 +335,38 @@
   }
 }
 
+.footer-form {
+  position: relative;
+
+  &__success {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: $color-default;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &::after {
+      content: url("../img/success.svg");
+      width: 50px;
+      height: 50px;
+      margin-left: 10px;
+    }
+  }
+}
+
 .just-validate-error-field {
   border: 2px solid red;
 
